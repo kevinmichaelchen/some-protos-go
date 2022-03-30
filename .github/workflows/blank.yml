@@ -42,7 +42,7 @@ jobs:
         with:
           bufVersion: v1.3.0
           protocPlugins:
-            go@v1.28.0 go-grpc@v1.45.0 ts-proto@1.110.2
+            go@v1.25.0 go-grpc@v1.0.1
           bufArgs:
             generate --config some-protos/idl/buf.yaml --template buf.gen.yaml
 
