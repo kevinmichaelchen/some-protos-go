@@ -53,5 +53,6 @@ jobs:
           git config --global user.email 'github-actions@users.noreply.github.com'
           git remote set-url origin https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/$GITHUB_REPOSITORY
           git checkout "${GITHUB_REF:11}"
+          git add pkg
           git commit -am "Auto-generated code"
           git push
