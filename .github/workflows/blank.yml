@@ -37,12 +37,14 @@ jobs:
           repository: kevinmichaelchen/some-protos
           path: some-protos
 
-      # Compile the protobufs
-      - name: Compile protobufs
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-          buf generate
+      # Compile protobufs
+      - uses: ory/build-buf-action@v0
+        with:
+          bufVersion: v1.1.0
+          protocPlugins:
+            go@v1.28.0 go-grpc@v1.45.0 ts-proto@1.110.2
+          bufArgs:
+            generate --config some-protos/idl/buf.yaml --template buf.gen.yaml
 
       # Commit auto-generated code
       - name: Commit auto-generated code
