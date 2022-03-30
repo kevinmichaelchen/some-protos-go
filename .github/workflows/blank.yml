@@ -40,7 +40,7 @@ jobs:
       # Compile protobufs
       - uses: ory/build-buf-action@v0
         with:
-          bufVersion: v1.1.0
+          bufVersion: v1.3.0
           protocPlugins:
             go@v1.28.0 go-grpc@v1.45.0 ts-proto@1.110.2
           bufArgs:
