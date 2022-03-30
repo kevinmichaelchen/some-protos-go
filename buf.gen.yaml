@@ -1,0 +1,8 @@
+version: v1
+plugins:
+  - name: go
+    out: pkg
+  - name: go-grpc
+    out: pkg
+    opt:
+      - require_unimplemented_servers=false
